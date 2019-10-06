@@ -1,0 +1,379 @@
+@import "base";
+@import "fonts";
+$main-color: #fff;
+$sub-color: #E3B873;
+$dark-color: #131313;
+$main-font-size: 14px;
+
+body {
+    background-color: #d3d3d3;
+}
+
+.outer-wrapper {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.hidden {
+    display: inline-block;
+    width: 1px;
+    height: 1px;
+    visibility: hidden;
+    position: absolute;
+}
+
+.header {
+    height: 83px;
+    display: flex;
+    color: $main-color;
+    background-color: $dark-color;
+    &-logo {
+        display: flex;
+        align-items: center;
+        margin-right: 90px;
+        margin-left: 82px;
+        &__text {
+            font-family: "Futura-demi-c";
+            text-transform: uppercase;
+            font-size: $main-font-size;
+            color: $sub-color;
+        }
+    }
+    &-nav {
+        max-width: 582px;
+        width: 100%;
+        margin-right: 60px;
+        line-height: 83px;
+        &-list {
+            display: flex;
+            padding: 0;
+            margin-top: 0;
+            margin-bottom: 0;
+            list-style-type: none;
+            justify-content: space-between;
+            &__item {
+                text-transform: uppercase;
+                font-family: "Futura-book-c";
+                font-size: $main-font-size;
+            }
+        }
+    }
+    &-phone {
+        line-height: 81px;
+        height: 50px;
+        margin-right: 43px;
+        color: $sub-color;
+        text-decoration: none;
+        font-family: "Futura-demi-c";
+        border-bottom: 1px solid $sub-color;
+    }
+    &-callback {
+        height: 37px;
+        width: 161px;
+        background-color: $sub-color;
+        align-self: center;
+        text-transform: uppercase;
+        &__text {
+            margin: 0;
+            line-height: 38px;
+            text-align: center;
+            font-family: "Futura-demi-c";
+            font-size: 14px;
+        }
+    }
+}
+
+.banner {
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    &-content {
+        height: 707px;
+        max-width: 1358px;
+        width: 100%;
+        background-image: url("/assets/images/background_1.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        &__text {
+            margin-left: 60px;
+            margin-top: 194px;
+            &_big {
+                height: 105px;
+                max-width: 570px;
+                margin-bottom: 0;
+                width: 100%;
+                font-family: "YesevaOne-regular";
+                font-size: 40px;
+                text-transform: uppercase;
+                color: $main-color;
+                font-weight: 500;
+                &-addition {
+                    color: $sub-color;
+                }
+            }
+            &_small {
+                margin-top: 5px;
+                margin-bottom: 41px;
+                font-family: "Futura-book-c";
+                font-size: 21px;
+                line-height: 30px;
+                max-width: 485px;
+                width: 100%;
+                color: $main-color;
+            }
+        }
+        &__btns {
+            margin-left: 60px;
+            display: flex;
+            color: $main-color;
+            font-family: "Futura-demi-c";
+            font-size: 13px;
+            text-transform: uppercase;
+            text-align: center;
+            line-height: 49px;
+        }
+        &__btn-calculate {
+            width: 207px;
+            height: 51px;
+            background-color: $sub-color;
+            margin-right: 20px;
+            border: 1px solid $sub-color;
+            box-sizing: border-box;
+            border-radius: 2px;
+        }
+        &__btn-submit {
+            width: 207px;
+            height: 51px;
+            background-color: transparent;
+            border: 1px solid $main-color;
+            box-sizing: border-box;
+            border-radius: 2px;
+        }
+    }
+    &-instagram {
+        max-height: 82px;
+        height: 100%;
+        width: 708px;
+        transform: rotate(90deg);
+        transform-origin: 0 101%;
+        position: absolute;
+        left: 0;
+        top: -84px;
+        background-color: $dark-color;
+        &__text {
+            color: $sub-color;
+            text-align: center;
+            text-transform: uppercase;
+            font-family: "Futura-demi-c";
+            font-size: 14px;
+            line-height: 55px;
+            margin-left: -90px;
+            position: relative;
+            &::after {
+                content: "";
+                top: 26px;
+                left: 57%;
+                position: absolute;
+                height: 10px;
+                width: 51px;
+                border-top: 1px solid $sub-color;
+            }
+            &_link {
+                text-decoration: none;
+                color: inherit;
+            }
+        }
+    }
+    &-scroll-btn {
+        max-width: 247px;
+        width: 100%;
+        height: 97px;
+        bottom: -47px;
+        left: 0;
+        position: absolute;
+        background-color: $dark-color;
+        &__text {
+            margin-left: 48px;
+            font-family: "YesevaOne-regular";
+            font-size: 14px;
+            text-transform: uppercase;
+            color: #fff;
+            line-height: 70px;
+            position: relative;
+            &::after {
+                content: "";
+                position: absolute;
+                height: 30px;
+                width: 30px;
+                top: 20px;
+                right: 45px;
+                background-image: url(/assets/images/scroll_down.svg);
+                background-repeat: no-repeat;
+            }
+        }
+    }
+}
+
+.completed-projects {
+    background-color: $dark-color;
+    display: flex;
+    height: 700px;
+    padding-top: 107px;
+    &-description {
+        margin-top: 40px;
+        margin-left: 101px;
+        max-width: 442px;
+        color: $main-color;
+        display: flex;
+        flex-wrap: wrap;
+        align-self: flex-start;
+        &__text {
+            width: 100%;
+            height: 215px;
+            &_section-big {
+                font-family: "YesevaOne-regular";
+                font-size: 27px;
+                text-transform: uppercase;
+                color: $sub-color;
+                max-width: 253px;
+                width: 100%;
+                position: relative;
+                margin-bottom: 34px;
+                &::after {
+                    content: "";
+                    top: 45px;
+                    left: 65%;
+                    position: absolute;
+                    height: 10px;
+                    width: 92px;
+                    border-top: 1px solid $sub-color;
+                }
+            }
+            &_section-small {
+                font-family: "Futura-book-c";
+                font-size: 18px;
+                line-height: 30px;
+            }
+            &_desc-big {
+                font-family: "YesevaOne-regular";
+                font-size: 18px;
+                text-transform: uppercase;
+                color: $sub-color;
+                margin-bottom: 0;
+            }
+            &_desc-small {
+                font-family: "Futura-book-c";
+                font-size: 15px;
+                line-height: 20px;
+                max-width: 120px;
+                width: 100%;
+            }
+        }
+        &__text:first-child {
+            margin-bottom: 25px;
+        }
+        &__text:not(:first-child) {
+            width: 50%;
+            margin-bottom: 50px;
+            height: 73px;
+        }
+        &__slider-controls {
+            display: flex;
+            max-width: 205px;
+            width: 100%;
+            height: 15px;
+            &_left {
+                height: 20px;
+                max-width: 45px;
+                width: 100%;
+                background-image: url(/assets/images/arrow_left.png);
+                background-repeat: no-repeat;
+                margin-right: 30px;
+            }
+            &_blocks {
+                max-width: 63px;
+                width: 100%;
+                display: flex;
+                &-block {
+                    background-image: url(/assets/images/arrow_inactive.png);
+                    background-repeat: no-repeat;
+                    background-position: 50% 50%;
+                    width: 33%;
+                }
+                &-block:first-child {
+                    background-image: url(/assets/images/arrow_active.png);
+                }
+            }
+            &_right {
+                height: 20px;
+                max-width: 45px;
+                width: 100%;
+                background-image: url(/assets/images/arrow_right.png);
+                background-repeat: no-repeat;
+                margin-left: 30px;
+            }
+        }
+    }
+    &-slider {
+        width: 59%;
+        margin-left: 50px;
+        &-nav {
+            max-width: 623px;
+            width: 100%;
+            height: 24px;
+            color: $main-color;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 45px;
+            font-family: "YesevaOne-regular";
+            font-size: 14px;
+            text-transform: uppercase;
+            &__item:first-child {
+                color: $sub-color;
+                border-bottom: 1px solid $sub-color;
+            }
+            &__item:not(:first-child) {
+                opacity: 0.3;
+            }
+        }
+        &-images {
+            overflow: hidden;
+            display: flex;
+            &__item {
+                max-width: 679px;
+                width: 100%;
+                background-color: lightgrey;
+                height: 482px;
+                position: relative;
+                &-next-btn {
+                    position: absolute;
+                    width: 90px;
+                    height: 90px;
+                    top: 40%;
+                    left: 20%;
+                    background-image: url(/assets/images/slider_btn.png);
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                }
+            }
+            &__item:first-child {
+                background-image: url("/assets/images/slider_1.png");
+                background-repeat: no-repeat;
+                background-size: cover;
+                margin-right: 21px;
+            }
+            &__item:nth-child(2) {
+                max-width: 148px;
+                background-image: url("/assets/images/slider_2.png");
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+        }
+    }
+}
+
+@media (max-width: 991px) {
+}
+
+@media (max-width: 767px) {
+}
