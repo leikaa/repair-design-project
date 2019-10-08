@@ -6,7 +6,7 @@ $dark-color: #131313;
 $main-font-size: 14px;
 
 body {
-    background-color: #d3d3d3;
+    background-color: #959595;
 }
 
 .outer-wrapper {
@@ -27,6 +27,29 @@ body {
     display: flex;
     color: $main-color;
     background-color: $dark-color;
+    padding-right: 102px;
+    &-light {
+        font-family: "YesevaOne-regular";
+        font-size: 20px;
+        text-transform: uppercase;
+        color: $main-color;
+        width: 100%;
+        margin-top: 0;
+        text-align: center;
+        position: relative;
+        font-weight: 100;
+    }
+    &-dark {
+        font-family: "YesevaOne-regular";
+        font-size: 20px;
+        text-transform: uppercase;
+        color: $dark-color;
+        width: 100%;
+        margin-top: 0;
+        text-align: center;
+        position: relative;
+        font-weight: 100;
+    }
     &-logo {
         display: flex;
         align-items: center;
@@ -42,8 +65,8 @@ body {
     &-nav {
         max-width: 582px;
         width: 100%;
-        margin-right: 60px;
-        line-height: 83px;
+        margin-right: 80px;
+        line-height: 86px;
         &-list {
             display: flex;
             padding: 0;
@@ -64,6 +87,7 @@ body {
         margin-right: 43px;
         color: $sub-color;
         text-decoration: none;
+        font-size: 14px;
         font-family: "Futura-demi-c";
         border-bottom: 1px solid $sub-color;
     }
@@ -78,7 +102,7 @@ body {
             line-height: 38px;
             text-align: center;
             font-family: "Futura-demi-c";
-            font-size: 14px;
+            font-size: 13px;
         }
     }
 }
@@ -93,7 +117,7 @@ body {
         width: 100%;
         background-image: url("/assets/images/background_1.png");
         background-repeat: no-repeat;
-        background-size: contain;
+        background-size: cover;
         &__text {
             margin-left: 60px;
             margin-top: 194px;
@@ -115,9 +139,9 @@ body {
                 margin-top: 5px;
                 margin-bottom: 41px;
                 font-family: "Futura-book-c";
-                font-size: 21px;
+                font-size: 22px;
                 line-height: 30px;
-                max-width: 485px;
+                max-width: 465px;
                 width: 100%;
                 color: $main-color;
             }
@@ -217,7 +241,7 @@ body {
 .completed-projects {
     background-color: $dark-color;
     display: flex;
-    height: 700px;
+    height: 642px;
     padding-top: 107px;
     &-description {
         margin-top: 40px;
@@ -367,6 +391,697 @@ body {
                 background-image: url("/assets/images/slider_2.png");
                 background-repeat: no-repeat;
                 background-size: cover;
+            }
+        }
+    }
+}
+
+.online-control {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background: linear-gradient($dark-color 35%, $main-color 35%);
+    &-video {
+        height: 434px;
+        max-width: 817px;
+        width: 100%;
+        margin-top: 58px;
+        margin-bottom: 95px;
+    }
+    &-description {
+        margin-top: 0;
+        margin-bottom: 92px;
+        max-width: 675px;
+        width: 100%;
+        text-align: center;
+        font-family: "Futura-book-c";
+        font-size: 20px;
+        line-height: 30px;
+        position: relative;
+        display: inline-block;
+    }
+    &-description::after {
+        content: "";
+        top: -26px;
+        left: 45%;
+        position: absolute;
+        height: 10px;
+        width: 55px;
+        border-top: 1px solid $sub-color;
+    }
+}
+
+.online-control .header-light {
+    &::after {
+        content: "";
+        top: 36px;
+        left: 46%;
+        width: 114px;
+        height: 28px;
+        background-image: url("/assets/images/icon_cam.png");
+        position: absolute;
+    }
+}
+
+.online-control-callback {
+    background-color: $main-color;
+    height: 248px;
+    &-form {
+        text-align: center;
+        &-top {
+            font-family: "Futura-book-c";
+            font-size: 18px;
+            line-height: 30px;
+            height: 51px;
+            position: relative;
+            margin-bottom: 33px;
+            &__info-input {
+                border: 0;
+                border-bottom: 1px solid #959595;
+                height: 40px;
+                width: 231px;
+                box-sizing: border-box;
+                &:nth-of-type(1) {
+                    margin-right: 54px;
+                    &::-webkit-input-placeholder {
+                        color: #000;
+                    }
+                    &:-ms-input-placeholder {
+                        color: #000;
+                    }
+                    &::-moz-placeholder {
+                        color: #000;
+                        opacity: 1;
+                    }
+                }
+                &:nth-of-type(2) {
+                    &::-webkit-input-placeholder {
+                        color: #000;
+                    }
+                    &:-ms-input-placeholder {
+                        color: #000;
+                    }
+                    &::-moz-placeholder {
+                        color: #000;
+                        opacity: 1;
+                    }
+                }
+                &-name {
+                    position: absolute;
+                    margin-top: -15px;
+                    font-family: "Futura-book-c";
+                    font-size: 15px;
+                    color: #959595;
+                }
+                &-phone {
+                    position: absolute;
+                    margin-top: -15px;
+                    font-family: "Futura-book-c";
+                    font-size: 15px;
+                    color: #959595;
+                }
+            }
+            &__submit-input {
+                height: 51px;
+                border: 0;
+                width: 200px;
+                background-color: $sub-color;
+                margin-left: 45px;
+                font-family: "Futura-demi-c";
+                font-size: 15px;
+                text-transform: uppercase;
+                color: $main-color;
+                line-height: 55px;
+            }
+        }
+        &__checkbox {
+            display: none;
+            &-check {
+                position: relative;
+                font-family: "Futura-book-c";
+                font-size: 16px;
+                &::before {
+                    border-radius: 2px;
+                    content: "";
+                    font-size: 15px;
+                    color: #f3f3f3;
+                    text-align: center;
+                    line-height: 18px;
+                    position: absolute;
+                    height: 18px;
+                    width: 18px;
+                    top: -1px;
+                    left: -28px;
+                    background-color: $sub-color;
+                }
+            }
+        }
+    }
+}
+
+input[type=checkbox]:checked + label::after {
+    content: "\2713";
+    border-radius: 2px;
+    font-size: 15px;
+    color: #f3f3f3;
+    text-align: center;
+    line-height: 18px;
+    position: absolute;
+    height: 18px;
+    width: 18px;
+    top: 0;
+    left: -28px;
+    background-color: $sub-color;
+}
+
+.types-of-repair .header-dark {
+    &::after {
+        content: "";
+        top: 36px;
+        left: 46%;
+        width: 114px;
+        height: 28px;
+        background-image: url("/assets/images/icon_tools.png");
+        position: absolute;
+    }
+}
+
+.types-of-repair {
+    background-color: $main-color;
+    &-content {
+        display: flex;
+        margin-top: 74px;
+        padding: 0 102px 124px 102px;
+        justify-content: space-between;
+        height: 608px;
+        &-item {
+            &__image {
+                height: 421px;
+                width: 392px;
+                background-repeat: no-repeat;
+                background-size: cover;
+                position: relative;
+            }
+            &:nth-child(1) .types-of-repair-content-item__image {
+                background-image: url("/assets/images/type_1.png");
+            }
+            &:nth-child(2) .types-of-repair-content-item__image {
+                background-image: url("/assets/images/type_2.png");
+            }
+            &:nth-child(3) .types-of-repair-content-item__image {
+                background-image: url("/assets/images/type_3.png");
+            }
+            &-list {
+                background-color: $main-color;
+                width: 330px;
+                height: 286px;
+                bottom: -160px;
+                left: 31px;
+                position: absolute;
+                padding-left: 34px;
+                padding-top: 25px;
+                box-sizing: border-box;
+                box-shadow:  5px 5px 7px #d3d3d3;
+                &__type-name {
+                    font-family: "YesevaOne-regular";
+                    font-size: 18px;
+                    margin-top: 0;
+                    margin-bottom: 13px;
+                }
+                &__list {
+                    padding-left: 20px;
+                    font-family: "Futura-book-c";
+                    font-size: 15px;
+                    color: #959595;
+                }
+                &__item {
+                    margin-bottom: 8px;
+                }
+            }
+            &__price {
+                width: 228px;
+                height: 54px;
+                background-color: $sub-color;
+                position: absolute;
+                left: 0;
+                bottom: -27px;
+                text-align: center;
+                font-family: "YesevaOne-regular";
+                font-size: 18px;
+                text-transform: uppercase;
+                color: $main-color;
+                line-height: 54px;
+            }
+        }
+    }
+}
+
+.free-consultation {
+    display: flex;
+    background-color: $main-color;
+    height: 725px;
+    padding-right: 102px;
+    padding-bottom: 242px;
+    &-scheme {
+        margin-top: 55px;
+        max-width: 779px;
+        height: 631px;
+        width: 100%;
+        background-image: url("/assets/images/bg_steps.png");
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        background-position: 0px -50px;
+        position: relative;
+        overflow: hidden;
+        &__circle {
+            left: -160px;
+            width: 624px;
+            height: 624px;
+            background-color: transparent;
+            border: 3px solid $sub-color;
+            border-radius: 50%;
+            position: absolute;
+        }
+        &__step {
+            position: absolute;
+            width: 84px;
+            height: 84px;
+            background-color: $main-color;
+            border-radius: 50%;
+            &:nth-child(2) {
+                top: 40px;
+                right: 375px;
+                ::before {
+                    content: "01";
+                    width: 20px;
+                    height: 20px;
+                    font-family: "YesevaOne-regular";
+                    font-size: 18px;
+                    position: absolute;
+                    left: 11px;
+                    bottom: 8px;
+                    color: $main-color;
+                }
+                ::after {
+                    content: "Our specialist will arrive for measurements per day contact, or appoint a date convenient for you";
+                    width: 390px;
+                    height: 42px;
+                    font-family: "Futura-medium-c";
+                    font-size: 18px;
+                    position: absolute;
+                    left: 60px;
+                    bottom: 0;
+                }
+            }
+            &:nth-child(3) {
+                top: 140px;
+                right: 295px;
+                ::before {
+                    content: "02";
+                    width: 20px;
+                    height: 20px;
+                    font-family: "YesevaOne-regular";
+                    font-size: 18px;
+                    position: absolute;
+                    left: 11px;
+                    bottom: 8px;
+                    color: $main-color;
+                }
+                ::after {
+                    content: "Free metering";
+                    width: 390px;
+                    height: 42px;
+                    font-family: "Futura-medium-c";
+                    font-size: 18px;
+                    position: absolute;
+                    left: 60px;
+                    bottom: 0;
+                    line-height: 42px;
+                }
+            }
+            &:nth-child(4) {
+                right: 270px;
+                top: 290px;
+                ::before {
+                    content: "03";
+                    width: 20px;
+                    height: 20px;
+                    font-family: "YesevaOne-regular";
+                    font-size: 18px;
+                    position: absolute;
+                    left: 11px;
+                    bottom: 8px;
+                    color: $main-color;
+                }
+                ::after {
+                    content: "Free consultation";
+                    width: 390px;
+                    height: 42px;
+                    font-family: "Futura-medium-c";
+                    font-size: 18px;
+                    position: absolute;
+                    left: 60px;
+                    bottom: 0;
+                    line-height: 42px;
+                }
+            }
+            &:nth-child(5) {
+                bottom: 105px;
+                left: 375px;
+                ::before {
+                    content: "04";
+                    width: 20px;
+                    height: 20px;
+                    font-family: "YesevaOne-regular";
+                    font-size: 18px;
+                    position: absolute;
+                    left: 11px;
+                    bottom: 8px;
+                    color: $main-color;
+                }
+                ::after {
+                    content: "Get a cost estimate and\0athe timing of your future repairs";
+                    width: 300px;
+                    white-space: pre;
+                    height: 42px;
+                    font-family: "Futura-medium-c";
+                    font-size: 18px;
+                    position: absolute;
+                    left: 60px;
+                    bottom: 0;
+                }
+            }
+            &-circle {
+                top: 21px;
+                left: 21px;
+                position: absolute;
+                width: 42px;
+                height: 42px;
+                background-color: $sub-color;
+                border-radius: 50%;
+            }
+        }
+    }
+    &-form {
+        height: 509px;
+        max-width: 506px;
+        width: 100%;
+        background-color: $dark-color;
+        margin-top: 106px;
+        margin-left: 54px;
+        padding: 28px 49px 27px;
+        box-sizing: border-box;
+        font-family: "Futura-book-c";
+        font-size: 18px;
+        &__form {
+            height: 481px;
+        }
+        &__title {
+            margin: 0 auto 50px;
+            font-family: "Futura-demi-c";
+            font-size: 20px;
+            color: $main-color;
+            max-width: 260px;
+            text-align: center;
+        }
+        &__info {
+            border: 0;
+            border-bottom: 1px solid #959595;
+            height: 40px;
+            width: 100%;
+            background-color: $dark-color;
+            box-sizing: border-box;
+                &:nth-of-type(1),
+                &:nth-of-type(2),
+                &:nth-of-type(3) {
+                    margin-bottom: 56px;
+                    &::-webkit-input-placeholder {
+                        color: $main-color;
+                    }
+                    &:-ms-input-placeholder {
+                        color: $main-color;
+                    }
+                    &::-moz-placeholder {
+                        color: $main-color;
+                        opacity: 1;
+                    }
+                }
+                &:nth-of-type(3) {
+                    margin-bottom: 20px;
+                }
+                &-name {
+                    position: absolute;
+                    margin-top: -15px;
+                    font-family: "Futura-book-c";
+                    font-size: 15px;
+                    color: #959595;
+                }
+                &-phone {
+                    position: absolute;
+                    margin-top: -15px;
+                    font-family: "Futura-book-c";
+                    font-size: 15px;
+                    color: #959595;
+                }
+                &-mail {
+                    position: absolute;
+                    margin-top: -15px;
+                    font-family: "Futura-book-c";
+                    font-size: 15px;
+                    color: #959595;
+                }
+        }
+        &__checkbox {
+            display: none;
+            &-check {
+                margin-left: 28px;
+                position: relative;
+                font-family: "Futura-book-c";
+                font-size: 16px;
+                color: $main-color;
+                &::before {
+                    border-radius: 2px;
+                    content: "";
+                    font-size: 15px;
+                    color: #f3f3f3;
+                    text-align: center;
+                    line-height: 18px;
+                    position: absolute;
+                    height: 18px;
+                    width: 18px;
+                    top: -1px;
+                    left: -28px;
+                    background-color: $sub-color;
+                }
+            }
+        }
+        &__submit {
+            height: 51px;
+            border: 0;
+            width: 200px;
+            float: right;
+            background-color: $sub-color;
+            margin-top: 38px;
+            font-family: "Futura-demi-c";
+            font-size: 13px;
+            text-transform: uppercase;
+            color: $main-color;
+        }
+        &__saving {
+            margin-left: -25px;
+            margin-top: 38px;
+            height: 73px;
+            width: 73px;
+            background-image: url("/assets/images/icon_pig.png");
+            background-repeat: no-repeat;
+            background-position: center 25%;
+            position: relative;
+            &::after {
+                content: "Help save 10 - 20% of the cost of materials";
+                height: 10px;
+                width: 245px;
+                top: 12px;
+                left: 95px;
+                position: absolute;
+                font-family: "Futura-demi-c";
+                font-size: 20px;
+                color: $sub-color;
+                word-spacing: 3.25px;
+            }
+        }
+    }
+}
+
+.design-themes {
+    display: flex;
+    height: 864px;
+    background-image: url("/assets/images/bg_themes.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 137px 102px 0 99px;
+    box-sizing: border-box;
+    &-list {
+        max-width: 350px;
+        width: 100%;
+        &__name {
+            font-family: "YesevaOne-regular";
+            font-size: 27px;
+            text-transform: uppercase;
+            line-height: 36px;
+            color: $sub-color;
+            margin-top: 0;
+            margin-bottom: 47px;
+        }
+        &__list {
+            padding: 0;
+            font-family: "Proxima-nova";
+            font-size: 20px;
+            list-style: none;
+        }
+        &__item {
+            color: $main-color;
+            margin-bottom: 25px;
+            &:nth-of-type(1) {
+                color: $sub-color;
+                border-bottom: 1px solid $sub-color;
+                width: 148px;
+            }
+        }
+    }
+    &__images {
+        height: 946px;
+        max-width: 354px;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: space-between;
+        &:nth-of-type(2) {
+            margin: -178px 43px 0 137px;
+            & .design-themes__images_big {
+                background-image: url("/assets/images/themes_big_1.png");
+            }
+            & .design-themes__images_small {
+                background-image: url("/assets/images/themes_sm_1.png");
+            }
+        }
+        &:nth-of-type(3) {
+            margin-top: -249px;
+            & .design-themes__images_big {
+                background-image: url("/assets/images/themes_big_2.png");
+            }
+            & .design-themes__images_small {
+                background-image: url("/assets/images/themes_sm_2.png");
+            }
+        }
+        &_big {
+            width: 100%;
+            height: 556px;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        &_small {
+            width: 100%;
+            height: 350px;
+        }
+    }
+}
+
+.design-project .header-dark {
+    &::after {
+        content: "";
+        top: 36px;
+        left: 46%;
+        width: 114px;
+        height: 28px;
+        background-image: url("/assets/images/icon_pens.png");
+        position: absolute;
+    }
+}
+
+.design-project {
+    padding-top: 154px;
+    background: linear-gradient($main-color 57.5%, $dark-color 57.5%);
+    &-description {
+        margin: 64px auto 45px;
+        max-width: 760px;
+        width: 100%;
+        font-family: "Futura-book-c";
+        font-size: 20px;
+        text-align: center;
+    }
+    &-types {
+        display: flex;
+        padding: 0 102px 124px 102px;
+        justify-content: space-between;
+        height: 608px;
+        &-item {
+            &__image {
+                height: 421px;
+                width: 392px;
+                background-repeat: no-repeat;
+                background-size: cover;
+                position: relative;
+            }
+            &:nth-child(1) .design-project-types-item__image {
+                background-image: url("/assets/images/design_1.png");
+                & .design-project-types-item-list {
+                    height: 211px;
+                    bottom: -84px;
+                }
+            }
+            &:nth-child(2) .design-project-types-item__image {
+                background-image: url("/assets/images/design_2.png");
+                & .design-project-types-item-list {
+                    height: 286px;
+                    bottom: -159px;
+                }
+            }
+            &:nth-child(3) .design-project-types-item__image {
+                background-image: url("/assets/images/design_3.png");
+                & .design-project-types-item-list {
+                    height: 414px;
+                    bottom: -287px;
+                }
+            }
+            &-list {
+                background-color: $main-color;
+                width: 330px;
+                height: 286px;
+                left: 31px;
+                position: absolute;
+                padding-left: 34px;
+                padding-top: 25px;
+                box-sizing: border-box;
+                &__name {
+                    font-family: "YesevaOne-regular";
+                    font-size: 18px;
+                    margin-top: 0;
+                    margin-bottom: 13px;
+                }
+                &__list {
+                    padding-left: 20px;
+                    font-family: "Futura-book-c";
+                    font-size: 15px;
+                    color: #959595;
+                }
+                &__item {
+                    margin-bottom: 8px;
+                }
+            }
+            &__price {
+                width: 228px;
+                height: 54px;
+                background-color: $sub-color;
+                position: absolute;
+                left: 0;
+                bottom: -27px;
+                box-sizing: border-box;
+                padding-left: 33px;
+                font-family: "YesevaOne-regular";
+                font-size: 18px;
+                text-transform: uppercase;
+                color: $main-color;
+                line-height: 54px;
             }
         }
     }
