@@ -3,6 +3,7 @@
 $main-color: #fff;
 $sub-color: #E3B873;
 $dark-color: #131313;
+$active-color: #E7A131;
 $main-font-size: 14px;
 
 body {
@@ -78,6 +79,10 @@ body {
                 text-transform: uppercase;
                 font-family: "Futura-book-c";
                 font-size: $main-font-size;
+                cursor: pointer;
+                &:hover {
+                    color: $sub-color;
+                }
                 &:nth-of-type(1) {
                     color: $sub-color;
                 }
@@ -100,6 +105,10 @@ body {
         background-color: $sub-color;
         align-self: center;
         text-transform: uppercase;
+        &:hover {
+            background-color: $active-color;
+            cursor: pointer;
+        }
         &__text {
             margin: 0;
             line-height: 38px;
@@ -167,6 +176,10 @@ body {
             border: 1px solid $sub-color;
             box-sizing: border-box;
             border-radius: 2px;
+            &:hover {
+                background-color: $active-color;
+                cursor: pointer;
+            }
         }
         &__btn-submit {
             width: 207px;
@@ -175,6 +188,10 @@ body {
             border: 1px solid $main-color;
             box-sizing: border-box;
             border-radius: 2px;
+            &:hover {
+                background-color: $active-color;
+                cursor: pointer;
+            }
         }
     }
     &-instagram {
@@ -219,6 +236,10 @@ body {
         left: 0;
         position: absolute;
         background-color: $dark-color;
+        &:hover .banner-scroll-btn__text {
+            color: $sub-color;
+            cursor: pointer;
+        }
         &__text {
             margin-left: 48px;
             font-family: "YesevaOne-regular";
@@ -316,6 +337,9 @@ body {
                 background-image: url(/assets/images/arrow_left.png);
                 background-repeat: no-repeat;
                 margin-right: 30px;
+                &:hover {
+                    cursor: pointer;
+                }
             }
             &_blocks {
                 max-width: 63px;
@@ -326,6 +350,10 @@ body {
                     background-repeat: no-repeat;
                     background-position: 50% 50%;
                     width: 33%;
+                    &:hover {
+                        cursor: pointer;
+                        background-image: url(/assets/images/arrow_active.png);
+                    }
                 }
                 &-block:first-child {
                     background-image: url(/assets/images/arrow_active.png);
@@ -338,6 +366,9 @@ body {
                 background-image: url(/assets/images/arrow_right.png);
                 background-repeat: no-repeat;
                 margin-left: 30px;
+                &:hover {
+                    cursor: pointer;
+                }
             }
         }
     }
@@ -362,6 +393,11 @@ body {
             &__item:not(:first-child) {
                 opacity: 0.3;
             }
+            &__item:hover {
+                color: $sub-color;
+                cursor: pointer;
+                opacity: 1;
+            }
         }
         &-images {
             overflow: hidden;
@@ -381,6 +417,9 @@ body {
                     background-image: url(/assets/images/slider_btn.png);
                     background-repeat: no-repeat;
                     background-size: cover;
+                    &:hover {
+                        cursor: pointer;
+                    }
                 }
             }
             &__item:first-child {
@@ -515,6 +554,9 @@ body {
                 text-transform: uppercase;
                 color: $main-color;
                 line-height: 55px;
+                &:hover {
+                    cursor: pointer;
+                }
             }
         }
         &__checkbox {
@@ -889,6 +931,9 @@ input[type=checkbox]:checked + label::after {
             font-size: 13px;
             text-transform: uppercase;
             color: $main-color;
+            &:hover {
+                cursor: pointer;
+            }
         }
         &__saving {
             margin-left: -25px;
@@ -948,6 +993,10 @@ input[type=checkbox]:checked + label::after {
                 color: $sub-color;
                 border-bottom: 1px solid $sub-color;
                 width: 148px;
+            }
+            &:hover {
+                cursor: pointer;
+                color: $sub-color;
             }
         }
     }
@@ -1166,6 +1215,9 @@ input[type=checkbox]:checked + label::after {
                 background-image: url(/assets/images/arrow_left.png);
                 background-repeat: no-repeat;
                 margin-right: 30px;
+                &:hover {
+                    cursor: pointer;
+                }
             }
             &_blocks {
                 max-width: 145px;
@@ -1176,6 +1228,10 @@ input[type=checkbox]:checked + label::after {
                     background-repeat: no-repeat;
                     background-position: 50% 50%;
                     width: 33%;
+                    &:hover {
+                        cursor: pointer;
+                        background-image: url(/assets/images/arrow_active.png);
+                    }
                 }
                 &-block:first-child {
                     background-image: url(/assets/images/arrow_active.png);
@@ -1188,6 +1244,9 @@ input[type=checkbox]:checked + label::after {
                 background-image: url(/assets/images/arrow_right.png);
                 background-repeat: no-repeat;
                 margin-left: 30px;
+                &:hover {
+                    cursor: pointer;
+                }
             }
         }
     }
@@ -1207,6 +1266,10 @@ input[type=checkbox]:checked + label::after {
             width: 100%;
             color: #959595;
             margin-right: 130px;
+            &:hover {
+                color: $main-color;
+                cursor: pointer;
+            }
             &__number {
                 margin-top: 0;
                 margin-bottom: 12px;
@@ -1397,7 +1460,7 @@ input[type=checkbox]:checked + label::after {
         justify-content: space-between;
     }
     &-person-feedback {
-        max-width: 376px;
+        width: 376px;
         height: 428px;
         padding: 24px 30px 85px 20px;
         box-sizing: border-box;
@@ -1585,6 +1648,9 @@ input[type=checkbox]:checked + label::after {
             color: $main-color;
             display: block;
             line-height: 51px;
+            &:hover {
+                cursor: pointer;
+            }
         }
     }
 }
@@ -1624,12 +1690,18 @@ input[type=checkbox]:checked + label::after {
             height: 28px;
             background: url("/assets/images/small_icon_mail.png") no-repeat;
             background-size: contain;
+            &:hover {
+                cursor: pointer;
+            }
         }
         &__instagram {
             width: 28px;
             height: 28px;
             background: url("/assets/images/small_icon_insta.png");
             background-size: contain;
+            &:hover {
+                cursor: pointer;
+            }
         }
     }
     &__location {
@@ -1676,6 +1748,10 @@ input[type=checkbox]:checked + label::after {
                 text-transform: uppercase;
                 font-family: "Futura-book-c";
                 font-size: $main-font-size;
+                &:hover {
+                    color: $sub-color;
+                    cursor: pointer;
+                }
                 &:nth-of-type(1) {
                     color: $sub-color;
                 }
@@ -1698,6 +1774,10 @@ input[type=checkbox]:checked + label::after {
         background-color: $sub-color;
         align-self: center;
         text-transform: uppercase;
+        &:hover {
+            background-color: $active-color;
+            cursor: pointer;
+        }
         &__text {
             margin: 0;
             line-height: 38px;
