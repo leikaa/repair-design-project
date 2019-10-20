@@ -2753,3 +2753,53 @@ input[type=checkbox]:checked + label::after {
         display: none;
     }
 }
+
+@-moz-document url-prefix() {
+    .free-consultation-form__form {
+        position: relative;
+    }
+
+    .free-consultation-form__info-phone {
+        left: 0;
+        top: 194px;
+    }
+
+    .free-consultation-form__info-mail {
+        left: 0;
+        top: 290px;
+    }
+
+    .feedback-form__info-question {
+        left: 182px;
+        top: 217px;
+    }
+
+    @media (max-width: 991px) {
+        .feedback-form__info-phone {
+            left: 20px;
+            top: 208px;
+        }
+
+        .feedback-form__info-question {
+            left: 20px;
+            top: 312px;
+        }
+    }
+
+    @media (max-width: 767px) {
+        .online-control-callback-form-top__info-input-phone {
+            left: 0;
+            top: 100px;
+        }
+
+        .feedback-form__info-phone {
+            left: 0;
+            top: 189px;
+        }
+
+        .feedback-form__info-question {
+            left: 0;
+            top: 293px;
+        }
+    }
+}
